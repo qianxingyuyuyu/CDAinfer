@@ -3,14 +3,14 @@ from keras.models import load_model
 import numpy as np
 import pandas as pd
 import logging
-import argparse  # 添加argparse模块处理命令行参数
+import argparse
 
 
 parser = argparse.ArgumentParser(description='Run model optimization with custom parameters.')
-parser.add_argument('--logfile', type=str, default='actor_model_all_20-250_newnew.txt',
-                    help='Filename for the output log (default: actor_model_all_20-250_newnew.txt)')
-parser.add_argument('--modelfile', type=str, default='actor_model_all_20-250_new.h5',
-                    help='Filename for the model file (default: actor_model_all_20-250_new.h5)')
+parser.add_argument('--logfile', type=str,
+                    help='Filename for the output log')
+parser.add_argument('--modelfile', type=str,
+                    help='Filename for the model file')
 args = parser.parse_args()
 
 
