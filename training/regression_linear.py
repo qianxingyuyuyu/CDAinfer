@@ -27,7 +27,7 @@ random.seed(42)
 train_data, other_data= train_test_split(data, test_size=0.2,random_state=42)  
 val_data, test_data = train_test_split(other_data, test_size=0.5,random_state=42) 
 
-
+# generate_data '../saved_model' behavior
 X_train_history,X_val_history,X_test_history=generate_data('history',train_data,val_data, test_data)
 X_train_bids,X_val_bids,X_test_bids=generate_data('bids',train_data,val_data, test_data)
 X_train_asks,X_val_asks,X_test_asks=generate_data('asks',train_data,val_data, test_data)
