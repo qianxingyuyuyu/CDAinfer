@@ -13,7 +13,7 @@ pip install -r requirements.txt
 ## Data Preparation
 
 - Directory: `data_processing`
-- Split the original data into `price.csv`, `transaction.csv` and `user.csv`. Run `data_processing.py` to generate `newnewdata_nn.jsonl`. Due to file size limitations for uploads, only 2.5% of the data volume is displayed here.
+- Split the original data into `price.csv`, `transaction.csv` and `user.csv`. (Due to file size limitations for uploads, `transaction.csv` need to be unzipped) Run `data_processing.py` to generate `newnewdata_nn.jsonl`. Due to file size limitations for uploads, only 2.5% of the `newnewdata_nn.jsonl` data volume is displayed here `sampled dataset.jsonl`.
 
 - Additionally, this directory contains files including `bound.jsonl`, `inference_data.jsonl`, and `inference_market.txt`, which are used for boundary calculation and inference respectively.
 
