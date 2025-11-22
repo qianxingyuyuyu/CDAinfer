@@ -69,9 +69,11 @@ def replace_nan_with_padding(data):
 
 def generate_data(name,train_data,val_data,test_data):
     scaler = StandardScaler()
-    ###########################################################################################
+    #####################################Set the path according to different file directories######################################################
     mean_path = os.path.join('../saved_model', f'{name}_mean.npy')
     std_path = os.path.join('../saved_model', f'{name}_std.npy')
+    # mean_path = os.path.join('saved_model', f'{name}_mean.npy')
+    # std_path = os.path.join('saved_model', f'{name}_std.npy')
 
     if name in ['history','bids','asks','previous_offer','previous_trade']:
         if name=='history':
@@ -174,11 +176,14 @@ def generate_data(name,train_data,val_data,test_data):
                 X_train = np.array(X_train)
                 X_val = np.array(X_val)
                 X_test = np.array(X_test)
-                ###########################################################################################
+                ################################Depending on the task output, configure whether behaviour//10.###########################################################
                 if name=='behavior':
-                    X_train = X_train // 10
-                    X_val = X_val // 10
-                    X_test = X_test// 10
+                    # X_train = X_train // 10
+                    # X_val = X_val // 10
+                    # X_test = X_test// 10
+                    X_train = X_train
+                    X_val = X_val
+                    X_test = X_test
                 if name=='sample_cost_value' or name=='reward':
                     X_train = X_train / 150
                     X_val = X_val / 150
